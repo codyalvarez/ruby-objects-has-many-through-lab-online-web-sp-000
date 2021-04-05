@@ -1,5 +1,5 @@
 class Genre
-  attr_accessor :name, :songs, :artist
+  attr_accessor :name, :song, :artist
 
   @@all = []
 
@@ -20,7 +20,7 @@ class Genre
     Song.all.select { |song| song.genre == self }
   end
 
-  def artist
+  def artists
     songs.collect { |song| song.artist  }
   end
 end
